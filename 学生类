@@ -1,0 +1,101 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace StudentSystem
+
+{
+    class Student
+
+    {
+
+        string stuID;
+        string Name;
+        string Sex;
+        string Class;
+        double Chinese;
+        double Math;
+        double English;
+
+        public Student(string stuID, string Name, string Sex, string Class, double Chinese, double Math, double English)
+        {
+            this.stuID = stuID;
+        }
+
+        public Student()
+
+        { }
+
+
+        public void setStuID(string stuID)
+        {
+            this.stuID = stuID;
+        }
+
+        public void setName(string Name)
+        {
+            this.Name = Name;
+        }
+
+        public void setSex(string Sex)
+        {
+            this.Sex = Sex;
+        }
+
+        public void setClass(string Class)
+        {
+            this.Class = Class;
+        }
+
+        public void setChinese(double Chinese)
+        {
+            this.Chinese = Chinese;
+        }
+
+        public void setMath(double Math)
+        {
+            this.Math = Math;
+        }
+
+        public void setEnglish(double English)
+        {
+            this.English = English;
+        }
+        /// <summary>
+        /// 计算平均成绩
+        /// </summary>
+        /// <param name="Chinese"></param>
+        /// <param name="Math"></param>
+        /// <param name="English"></param>
+        /// <returns></returns>
+        public double ComputeAvg(double Chinese, double Math, double English)
+        {
+            this.Chinese = Chinese;
+            this.Math = Math;
+            this.English = English;      
+            double sum, avg;
+            sum = Chinese + Math + English;
+            avg = sum / 3;
+            return avg;
+        }
+
+        /// <summary>
+        /// 输出
+        /// </summary>
+        public void showMSG()
+
+        {
+            Console.WriteLine(" 学号：" + stuID + " 姓名：" + Name + " 班级 " + Class + " 性别 " + Sex + " 语文" + Chinese + " 数学" + Math + "英语 " + English + " 平均成绩 " + ComputeAvg(Chinese, Math, English));
+
+        }
+
+
+
+    }
+
+}

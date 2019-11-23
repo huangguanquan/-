@@ -181,7 +181,103 @@ namespace StudentSystem
         /// 修改学生信息
         /// </summary>
         /// <param name="dic"></param>
-        public static void UpdateStudent（）{}
+         public static void UpdateStudent(Dictionary<string, Student> dic)
+
+        {
+
+            string stuID;
+
+            string id;
+
+            Console.WriteLine("请输入修改学生的学号：");
+
+            stuID = Console.ReadLine();
+
+            while (!dic.ContainsKey(stuID))
+
+            {
+
+                Console.WriteLine("该学生不存在，请重新输入:");
+
+                stuID = Console.ReadLine();
+
+            }
+
+
+
+            Console.WriteLine("1.修改姓名  2.修改性别  3.修改班级  4.修改语文成绩  5.修改数学成绩  6.修改英语成绩");
+
+            Console.WriteLine("请输入选择修改的序号：");
+
+            id = Console.ReadLine();
+
+            switch (id)
+
+            {
+
+                case "1":
+
+                    Console.WriteLine("请输入学生姓名：");
+
+                    string Name = Console.ReadLine();
+
+                    dic[stuID].setName(Name);
+
+                    break;
+
+                case "2":
+
+                    Console.WriteLine("请输入学生性别：");
+
+                    string Sex = Console.ReadLine();
+
+                    dic[stuID].setSex(Sex);
+
+                    break;
+
+                case "3":
+
+                    Console.WriteLine("请输入学生班级：");
+
+                    string Class = Console.ReadLine();
+
+                    dic[stuID].setClass(Class);
+
+                    break;
+
+                case "4":
+
+                    Console.WriteLine("请输入学生语文成绩：");
+
+                    double Chinese = double.Parse(Console.ReadLine());
+
+                    dic[stuID].setChinese(Chinese);
+
+                    break;
+
+                case "5":
+
+                    Console.WriteLine("请输入学生数学成绩：");
+
+                    double Math = double.Parse(Console.ReadLine());
+
+                    dic[stuID].setMath(Math);
+
+                    break;
+
+                case "6":
+
+                    Console.WriteLine("请输入学生英语成绩：");
+
+                    double English = double.Parse(Console.ReadLine());
+
+                    dic[stuID].setEnglish(English);
+
+                    break;
+
+
+
+            }
 
 
         }

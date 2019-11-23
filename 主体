@@ -1,0 +1,127 @@
+
+//主体
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace StudentSystem
+
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("欢迎使用2018级学生管理系统");
+
+            Console.WriteLine("===============================================");
+
+            Console.WriteLine("请选择如下操作：");
+
+            Console.WriteLine("A：添加  B：查询  C:删除  D：修改  E退出系统");
+
+            string ch;
+
+            //   Hashtable stu = new Hashtable();
+
+            Dictionary<string, Student> stu = new Dictionary<string, Student>();
+
+            Student student = new Student();
+
+            Console.Write("请输入选择功能：");
+
+            ch = Console.ReadLine();
+
+            while (ch != "E")
+
+            {
+
+                switch (ch)
+
+                {
+
+                    case "A":
+
+                        AddStudent(stu);
+
+                        break;
+
+                    case "B":
+
+                        QueryStudent(stu);
+
+                        break;
+
+
+
+                    case "C":
+
+                        DeleteStudent(stu);
+
+                        break;
+
+                    case "D":
+
+                        UpdateStudent(stu);
+
+                        break;
+
+                    case "E":
+
+                        break;
+
+                }
+
+                Console.Write("请输入选择功能：");
+
+                ch = Console.ReadLine();
+
+            }
+
+            foreach (KeyValuePair<string, Student> de in stu)
+
+            {
+
+                Console.WriteLine(de.Value);
+
+            }
+            // Console.WriteLine(student.showMSG());
+            Console.ReadLine();
+
+            }
+
+        /// <summary>
+        /// 添加学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void AddStudent（）{}
+
+
+        /// <summary>
+        /// 查询学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void QueryStudent（）{}
+
+        /// <summary>
+        /// 删除学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void DeleteStudent（）{}
+
+        /// <summary>
+        /// 修改学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void UpdateStudent（）{}
+
+
+        }

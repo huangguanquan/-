@@ -1,0 +1,32 @@
+制作一个简单的学生信息管理系统
+实现学生信息的增加，删除，修改，查询
+
+
+
+
+主要用到学生类Student；
+还有以下方法函数：
+/// <summary>
+        /// 添加学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void AddStudent（）{}
+
+
+        /// <summary>
+        /// 查询学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void QueryStudent（）{}
+
+        /// <summary>
+        /// 删除学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void DeleteStudent（）{}
+
+        /// <summary>
+        /// 修改学生信息
+        /// </summary>
+        /// <param name="dic"></param>
+        public static void UpdateStudent（）{}

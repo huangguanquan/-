@@ -175,7 +175,31 @@ namespace StudentSystem
         /// 删除学生信息
         /// </summary>
         /// <param name="dic"></param>
-        public static void DeleteStudent（）{}
+public static void DeleteStudent(Dictionary<string, Student> dic)
+
+        {
+
+            string stuID;
+
+            Console.WriteLine("请输入删除学生的学号：");
+
+            stuID = Console.ReadLine();
+
+            while (!dic.ContainsKey(stuID))
+
+            {
+
+                Console.WriteLine("该学生不存在，请重新输入:");
+
+                stuID = Console.ReadLine();
+
+            }
+
+            dic.Remove(stuID);
+
+            Console.WriteLine("成功删除。");
+
+        }
 
         /// <summary>
         /// 修改学生信息

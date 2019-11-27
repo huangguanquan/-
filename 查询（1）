@@ -1,0 +1,25 @@
+ public static void QueryStudent(Dictionary<string, Student> dic)
+
+        {
+
+            string stuID;
+
+            Student student = new Student();
+
+            Console.WriteLine("请输入查询学生的学号：");
+
+            stuID = Console.ReadLine();
+
+            while (!dic.ContainsKey(stuID))
+
+            {
+
+                Console.WriteLine("该学生不存在，请重新输入:");
+
+                stuID = Console.ReadLine();
+
+            }
+
+            dic[stuID].showMSG();
+
+        }

@@ -326,6 +326,3 @@ public static void DeleteStudent(Dictionary<string, Student> dic)
 
 
             }
-
-
-        }

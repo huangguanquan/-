@@ -223,7 +223,7 @@ public static void DeleteStudent(Dictionary<string, Student> dic)
 
             Console.WriteLine("成功删除。");
 
-        }
+        }//删除
 
         /// <summary>
         /// 修改学生信息
